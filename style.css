@@ -1,0 +1,562 @@
+.media-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    width: 100%;
+}
+
+.centered-media {
+    max-width: 100%;
+    max-height: 80vh;
+    height: auto;
+    margin: auto;
+    display: block;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    .media-center {
+        min-height: 180px;
+    }
+    .centered-media {
+        max-height: 40vh;
+    }
+}
+.main-title {
+    color: #fff;
+    font-family: 'Schoolbell', cursive;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 0.2em;
+}
+.sub-title {
+    color: #fff;
+    font-family: 'Schoolbell', cursive;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.clock {
+    font-family: 'Schoolbell', cursive;
+    color: #fff;
+    font-size: 1em;
+}
+.cast-heading {
+    text-align: center;
+    margin-bottom: 18px;
+}
+.cast-heading-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+.cast-class {
+    font-size: 3em;
+    color: #fff;
+    font-family: 'Schoolbell', cursive;
+    text-decoration: line-through;
+}
+.cast-title {
+    font-size: 3.8em;
+    color: #fff;
+    font-family: 'Schoolbell', cursive;
+}
+.cast-of {
+    display: block;
+    font-size: 1.2em;
+    color: #fff;
+    font-family: 'Schoolbell', cursive;
+}
+.cast-prod {
+    display: block;
+    font-size: 2em;
+    color: #fff;
+    font-family: 'Schoolbell', cursive;
+}
+.cast-note-tall {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.highlight-row {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 24px;
+        margin-top: 18px;
+}
+.swipe-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+    max-width: 700px;
+        margin: 16px auto 0 auto;
+    position: relative;
+    text-align: center;
+}
+.swipe-img {
+            width: 100%;
+            max-width: 500px;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(124,74,3,0.12);
+            margin: 0 auto;
+            display: block;
+}
+.swipe-btn {
+        background: transparent;
+            color: #fff;
+        border: none;
+        font-size: 2.5em;
+        font-family: "Schoolbell", cursive;
+        cursor: pointer;
+        height: 48px;
+        width: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: none;
+        outline: none;
+}
+.swipe-btn-left {
+    margin-right: 8px;
+}
+.swipe-btn-right {
+    margin-left: 8px;
+}
+.swipe-btn:hover {
+            color: #FFF9E3;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+
+
+body, html, .main-container, h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, span, div, input, button, label, .schoolbell-regular {
+    font-family: "Schoolbell", cursive !important;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.schoolbell-regular {
+    font-family: "Schoolbell", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.main-title {
+    color: #fff;
+    font-family: 'Schoolbell', cursive;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 0.2em;
+}
+.sub-title {
+    color: #fff;
+    font-family: 'Schoolbell', cursive;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+.clock {
+    color: #fff;
+    font-family: 'Schoolbell', cursive;
+    font-size: 1em;
+}
+.section-desc {
+    font-size: 1em;
+    color: #fff;
+    font-family: 'Schoolbell', cursive;
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 2px;
+}
+
+.main-title {
+    color: #fff;
+    font-family: 'Schoolbell', cursive;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 0.2em;
+}
+.sub-title {
+    color: #fff;
+    font-family: 'Schoolbell', cursive;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+.clock {
+    color: #fff;
+    font-family: 'Schoolbell', cursive;
+    font-size: 1em;
+}
+
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 18px;
+    font-family: 'Schoolbell', cursive;
+}
+
+
+.section-title {
+    color: #fff;
+    font-family: 'Schoolbell', cursive;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+.main-title {
+    color: #fff;
+    font-family: 'Schoolbell', cursive;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+.section-desc {
+    font-size: 1em;
+    color: #fff;
+    font-family: 'Schoolbell', cursive;
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 2px;
+}
+
+
+.premiere-row {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-top: 16px;
+}
+.countdown {
+    font-size: 22px;
+    color: #fff;
+    font-family: 'Schoolbell', cursive;
+}
+
+
+.highlight {
+    font-size: 2.2em;
+    color: #FFF9E3;
+    margin-top: 18px;
+    font-family: 'Schoolbell', cursive;
+    font-weight: bold;
+}
+
+
+.email-link {
+    color: #fff;
+    font-family: 'Schoolbell', cursive;
+}
+.social-link {
+    color: #fff;
+    font-family: 'Schoolbell', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+
+.schoolbell-regular {
+    font-family: "Schoolbell", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background: #172b18;
+    margin: 0;
+        font-family: "Schoolbell", cursive;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.main-container {
+    max-width: 900px;
+    margin: 40px auto 32px auto;
+    background: rgba(23,43,24,0.98);
+    border: 8px solid #402b21;
+    border-radius: 0;
+    box-shadow: 0 8px 32px rgba(64,43,33,0.18), 0 2px 8px rgba(0,0,0,0.08);
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+h1 {
+        font-size: 2.2em;
+        margin: 0 0 8px 0;
+        font-family: "Schoolbell", cursive;
+        letter-spacing: 1px;
+}
+
+h2 {
+        font-size: 1.3em;
+        margin: 0 0 18px 0;
+        font-family: "Schoolbell", cursive;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+nav a {
+        background: #402b21;
+        color: #fff;
+        border-radius: 8px;
+        padding: 8px 18px;
+        text-decoration: none;
+        font-size: 1.08em;
+        font-family: "Schoolbell", cursive;
+        box-shadow: 0 2px 8px rgba(64,43,33,0.10);
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+nav a:hover, nav a:focus {
+    background: #fff;
+    color: #402b21;
+    box-shadow: 0 4px 16px rgba(64,43,33,0.18);
+}
+nav a.active {
+    outline: 2px solid #eab308;
+    background: #fff;
+    color: #402b21;
+}
+
+.section {
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+        color: #fff;
+        font-family: "Schoolbell", cursive;
+    box-shadow: 0 2px 8px rgba(64,43,33,0.08);
+}
+
+img, .video-box {
+    border: 3px solid #402b21;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(64,43,33,0.10);
+    margin-bottom: 18px;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+        padding-left: 22px;
+        font-family: "Schoolbell", cursive;
+}
+
+
+@media (max-width: 900px) {
+    .main-container {
+        max-width: 98vw;
+        padding: 18px 6vw;
+    }
+}
+@media (max-width: 600px) {
+    .main-container {
+        padding: 10px 2vw;
+        margin: 18px auto;
+    }
+    nav {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+    .section {
+        padding: 10px 6px;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+    h2 {
+        font-size: 1em;
+    }
+}
+
+
+.clock, #uae-clock {
+        font-size: 1em;
+        margin-left: 12px;
+        vertical-align: middle;
+        font-family: "Schoolbell", cursive;
+}
+#analog-clock {
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+    margin-left: 18px;
+}
+
+
+h1 {
+    font-family: "Georgia", "Times New Roman";
+    color: rgb(100, 150, 200);
+}
+
+h2 {
+    color: rgb(150, 180, 220);
+    font-family: "Arial", "Sans Serif";
+}
+
+
+.header {
+    text-align: center;
+   
+    padding: 20px;
+}
+
+
+.nav {
+    text-align: center;
+    margin: 20px;
+}
+
+.nav a {
+    color: rgb(150, 200, 255);
+    margin: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+.nav a:hover {
+    color: rgb(200, 220, 255);
+    text-decoration: underline;
+}
+
+
+.section {
+    color: rgb(220, 220, 220);
+    margin: 30px;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 8px; 
+}
+
+
+
+.cast-row {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin: 16px auto 0 auto;
+    max-width: 650px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cast-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    margin: 0 8px;
+    padding: 0;
+}
+
+.cast-img {
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+    border: 4px solid #402b21;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(64,43,33,0.10);
+}
+
+.cast-note {
+    width: 180px;
+    min-height: 60px;
+    border: 2px solid #402b21;
+    border-radius: 8px;
+    padding: 8px;
+    font-family: "Schoolbell", cursive;
+    font-size: 1em;
+    resize: vertical;
+    background: #fff8e1;
+    color: #402b21;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+
+
+.video-box {
+    background-color: transparent;
+    height: 200px;
+    width: 400px;
+    text-align: center;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 8px; 
+    box-sizing: border-box; 
+}
+
+
+img {
+    width: 300px;
+    max-width: 100%; 
+    height: auto; 
+}
+
+
+.credits {
+    background-color: transparent;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 8px; 
+}
+
+
+ul {
+    color: rgb(200, 200, 200);
+}
+
+
+.footer {
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+@media (max-width: 768px) {
+    .video-box {
+        width: 90%;
+        max-width: 400px;
+    }
+    
+    .section {
+        margin: 15px;
+        padding: 15px;
+    }
+    
+    img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+  <h1 style="color: #fff; font-family: 'Schoolbell', cursive;">
+                    Late to Class
+                    <span class="clock" id="uae-clock" style="font-family: 'Schoolbell', cursive;"></span>
+                </h1>
+                <h2 style="color: #fff; font-family: 'Schoolbell', cursive;">By MMM Production</h2>
+
+                

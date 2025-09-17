@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Late to Class - World Premiere</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main-container">
+    <header>
+      <h1 class="main-title">
+        Late to Class
+        <span class="clock" id="uae-clock"></span>
+      </h1>
+      <h2 class="sub-title">By MMM Production</h2>
+    </header>
+    <nav>
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="AboutOurFilm.html" class="nav-link">About Our Film</a>
+  <a href="Cast.html" class="nav-link">Cast</a>
+  <a href="BehindTheScenes.html" class="nav-link">Behind the Scenes</a>
+    </nav>
+    <main style="width:100%;">
+  <h2 class="main-title">Short Film Trailer</h2>
+      <video controls width="100%" poster="photo.jpg">
+        <source src="latetoclass.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="section">
+  <div class="section">
+        <p class="section-desc">
+          Late to Class was created by three emirati NYUAD students, following the story of a friend who has a series of
+        </p>
+        <p class="section-desc">
+          predicaments while trying to get to her class. While Meera is trying to get to her class her friends Mouza and
+        </p>
+        <p class="section-desc">
+          Mahra are there wondering where she might have gone oblivious to the challenges shes facing.
+        </p>
+      </div>
+    <div class="section">
+  <h2 class="section-title">Premiere Information</h2>
+        <p>Date: Friday March 15 2025</p>
+        <p>Time: 7:00 PM</p>
+        <p>Location: NYU Abu Dhabi Arts Center</p>
+        <div class="premiere-row">
+          <div id="countdown" class="countdown"></div>
+        </div>
+        <div class="highlight-row">
+          <div class="highlight">Don't be late!</div>
+          <canvas id="analog-clock" width="80" height="80"></canvas>
+        </div>
+      </div>
+    <div class="section">
+  <h2 class="section-title">Production Team</h2>
+        <ul>
+          <li>Director: M M M</li>
+          <li>Producer: MMM Production</li>
+          <li>Writer: M M M</li>
+          <li>Editor: M M M</li>
+        </ul>
+      </div>
+    <div class="section">
+  <h2 class="section-title">Contact</h2>
+  <p>Email: <a href="mailto:MMMProductionsNYUAD@Nyu.edu" class="email-link">MMMProductionsNYUAD@Nyu.edu</a></p>
+  <p>Follow us on social media for updates!</p>
+  <p><a href="#" class="social-link">Instagram: MMMProductionsNYUAD</a> | <a href="#" class="social-link">TikTok: MMMProductionsNYUAD</a></p>
+      </div>
+    </main>
+  </div>
+  <script>
+    function updateClock() {
+     
+      const now = new Date();
+      const uaeOffset = 4 * 60; 
+      const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+      const uaeTime = new Date(utc + (uaeOffset * 60000));
+      const hours = String(uaeTime.getHours()).padStart(2, '0');
+      const minutes = String(uaeTime.getMinutes()).padStart(2, '0');
+      const seconds = String(uaeTime.getSeconds()).padStart(2, '0');
+      document.getElementById('uae-clock').textContent = `${hours}:${minutes}:${seconds} UAE`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    
+    function updateCountdown() {
+      const eventDate = new Date('2025-09-30T19:00:00+04:00');
+      const now = new Date();
+     
+      const uaeOffset = 4 * 60;
+      const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+      const uaeNow = new Date(utc + (uaeOffset * 60000));
+      const diff = eventDate - uaeNow;
+      if (diff > 0) {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+        document.getElementById('countdown').textContent = `Countdown: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+      } else {
+        document.getElementById('countdown').textContent = "It's showtime!";
+      }
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+   
+    function drawAnalogClock() {
+      const canvas = document.getElementById('analog-clock');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+     
+      const now = new Date();
+      const uaeOffset = 4 * 60;
+      const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+      const uaeTime = new Date(utc + (uaeOffset * 60000));
+      const hours = uaeTime.getHours() % 12;
+      const minutes = uaeTime.getMinutes();
+      const seconds = uaeTime.getSeconds();
+    
+      ctx.save();
+      ctx.translate(40, 40);
+      ctx.beginPath();
+      ctx.arc(0, 0, 38, 0, 2 * Math.PI);
+      ctx.fillStyle = '#FFF9E3';
+      ctx.fill();
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = '#333';
+      ctx.stroke();
+ 
+      for (let i = 0; i < 12; i++) {
+        ctx.save();
+        ctx.rotate((i * Math.PI) / 6);
+        ctx.beginPath();
+        ctx.moveTo(0, -32);
+        ctx.lineTo(0, -36);
+        ctx.strokeStyle = '#333';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.restore();
+      }
+     
+      ctx.save();
+      ctx.rotate(((hours + minutes / 60) * Math.PI) / 6);
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(0, -20);
+      ctx.strokeStyle = '#222';
+      ctx.lineWidth = 4;
+      ctx.stroke();
+      ctx.restore();
+     
+      ctx.save();
+      ctx.rotate(((minutes + seconds / 60) * Math.PI) / 30);
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(0, -28);
+      ctx.strokeStyle = '#222';
+      ctx.lineWidth = 3;
+      ctx.stroke();
+      ctx.restore();
+     
+      ctx.save();
+      ctx.rotate((seconds * Math.PI) / 30);
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(0, -32);
+      ctx.strokeStyle = '#eab308';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      ctx.restore();
+     
+      ctx.beginPath();
+      ctx.arc(0, 0, 3, 0, 2 * Math.PI);
+      ctx.fillStyle = '#333';
+      ctx.fill();
+      ctx.restore();
+    }
+    setInterval(drawAnalogClock, 1000);
+    drawAnalogClock();
+  </script>
+</body>
+</html>

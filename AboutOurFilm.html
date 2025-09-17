@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>About Our Film</title>
+    <link rel="stylesheet" href="style.css">
+ </head>
+<body> 
+        <div class="main-container">
+            <header>
+                <h1 class="main-title">
+                    Late to Class
+                    <span class="clock" id="uae-clock"></span>
+                </h1>
+                <h2 class="sub-title">By MMM Production</h2>
+            </header>
+            <nav>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="AboutOurFilm.html" class="nav-link">About Our Film</a>
+                <a href="Cast.html" class="nav-link">Cast</a>
+                <a href="BehindTheScenes.html" class="nav-link">Behind the Scenes</a>
+            </nav>
+            <main style="width:100%;">
+                <h2 class="main-title">About Our Film</h2>
+                <div class="section">
+                    <p class="section-desc">Late to Class follows the chaotic morning of three friends as they rush through school hallways, racing against the clock to make it on time.</p>
+                    <p class="section-desc">Meera takes the lead as the main character, determined yet constantly stumbling into obstacles.</p>
+                    <p class="section-desc">Mouza and Mahra support her with quick humor and unexpected teamwork, keeping the journey lively and unpredictable.</p>
+                    <p class="section-desc">This short film captures the comedy of everyday school life, showing how friendship and laughter can turn even the most stressful mornings into a memorable adventure.</p>
+                </div>
+            </main>
+        </div>
+
+
+ 
+    <script>
+        function updateClock() {
+            
+            const now = new Date();
+            const uaeOffset = 4 * 60; 
+            const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+            const uaeTime = new Date(utc + (uaeOffset * 60000));
+            const hours = String(uaeTime.getHours()).padStart(2, '0');
+            const minutes = String(uaeTime.getMinutes()).padStart(2, '0');
+            const seconds = String(uaeTime.getSeconds()).padStart(2, '0');
+            document.getElementById('uae-clock').textContent = `${hours}:${minutes}:${seconds} UAE`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+ 
+</html>
+
